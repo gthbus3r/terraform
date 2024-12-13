@@ -15,6 +15,7 @@ jobs:
       - name: Terraform security scan
         uses: aquasecurity/tfsec-action@v1.0.0 
         with:
+          format: json
           soft_fail: true
           
       - uses: actions/upload-artifact@v4
