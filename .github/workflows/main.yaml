@@ -13,9 +13,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Terraform security scan
-        uses: aquasecurity/tfsec-action@v1.0.0 
+        uses: aquasecurity/tfsec-action@v1.0.0 --out tfsec-output.json
         with:
-          format: checkstyle
+          format: json
           soft_fail: true
           
       - uses: actions/upload-artifact@v4
